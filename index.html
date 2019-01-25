@@ -39,7 +39,7 @@
 </div>
 <script>
 	const colBox = document.getElementById('colourBox');
-	const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+	const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet", "pink", "turquiose", "teal"];
 	const changeColBtn = document.getElementById('changeColourButton');
 	changeColBtn.addEventListener("click", changeColour);
 	
@@ -47,6 +47,8 @@
 			colors.forEach(function(color) {
 						let i = Math.floor((Math.random() * 10) + 1);
 						colBox.style.backgroundColor = colors[i];
+
+						document.getElementById('colourBox').innerHTML = colors[i];
 			});
 			return;
 	};
